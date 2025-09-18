@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+
+    --primary: 220 25% 15%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 220 15% 12%;
+
+    --muted: 220 12% 94%;
+    --muted-foreground: 220 8% 46%;
+
+    --accent: 214 85% 94%;
+    --accent-foreground: 220 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 89%;
+    --input: 220 13% 91%;
+    --ring: 214 85% 70%;
+
+    /* EventHub Brand Colors */
+    --brand-primary: 220 25% 15%;
+    --brand-secondary: 214 85% 70%;
+    --brand-accent: 214 85% 94%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 25% 15%), hsl(220 30% 20%));
+    --gradient-background: linear-gradient(180deg, hsl(220 20% 97%), hsl(220 15% 95%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 20% 98%));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(220 25% 15% / 0.1);
+    --shadow-card: 0 4px 12px -2px hsl(220 25% 15% / 0.08);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 6%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 25% 8%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 25% 8%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 214 85% 70%;
+    --primary-foreground: 220 25% 15%;
+
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 220 15% 85%;
+
+    --muted: 220 20% 12%;
+    --muted-foreground: 220 8% 60%;
+
+    --accent: 220 20% 12%;
+    --accent-foreground: 214 85% 70%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
+    --ring: 214 85% 70%;
+
+    /* Dark mode gradients */
+    --gradient-background: linear-gradient(180deg, hsl(220 25% 6%), hsl(220 25% 8%));
+    --gradient-card: linear-gradient(135deg, hsl(220 25% 8%), hsl(220 25% 10%));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    min-height: 100vh;
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
